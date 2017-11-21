@@ -10,7 +10,7 @@ This book is about developing an application which is a little bit more fun than
 
 It is about learning techniques which falls outside the boundaries of your typical CRUD application.
 
-On a functional level this book will teach you how to build an application which will display a list of Starbucks branches on a map. 
+On a functional level this book will teach you how to build an application which displays a list of airports around the world on a map. 
 
 ![]()
 
@@ -18,7 +18,7 @@ A user can zoom and pan the map, or navigate to a particular city using the sear
 
 ![]()
 
-Finally, a user can also select any Starbucks branch and view more information about that branch.
+Finally, a user can also select any airport to view more information about it.
 
 ![]()
 
@@ -38,12 +38,12 @@ This book assumes that you already have a basic understanding of ASP.NET Core an
 * Handling a large amount of markers on a map using clusters.
 * Reading information from a CSV file.
 * Using GeoJSON to represent geographical information.
-* Using 3rd party APIs such as Foursquare to augment information.
+* Using 3rd party APIs such as Google Places to augment airport information.
 * Using Algolia Places (https://community.algolia.com/places/) to add a location search autocomplete texbox to the map, and zooming the user to a selected location.
 * Determining the current location of a user from their IP address.
 * Using the Tailwind CSS framework (https://tailwindcss.com/) to style HTML.
-* Probaly some more cool things I cannot think of right now... 😉
+* Probably some more cool things I cannot think of right now... 😉
 
-Does this sound like fun to you? A bit more exciting than your typical "_let's display a list of items in a grid_" tutorial?
+Does this sound like fun to you? A bit more exciting than your typical "_let's display a list of items in a list_" tutorial?
 
 If so, then let's dig in!
