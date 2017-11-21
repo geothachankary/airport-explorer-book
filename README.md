@@ -1,6 +1,6 @@
 # Introduction
 
-There are many books and courses out there which teaches you ASP.NET Core and most of them seem to be centred around developing some sort of CRUD (Create, read, update and delete) application. In other words they will show you to create an application which displays a list of items on a page, add new items to the list, view existing items, update items and delete an items. Typically these applications are also back by some sort of database in which aforemetioned items will be stored.
+There are many books and courses that will teach you ASP.NET Core. Most of them seem to be centred around developing some sort of CRUD (Create, read, update and delete) application. In other words they will show you to create an application which displays a list of items on a page, add new items to the list, view existing items, as well as update and delete items. Typically these applications are also backed by some sort of database in which aforemetioned items will be stored.
 
 But that is **NOT** what you will learn in this book.
 
@@ -22,7 +22,7 @@ Finally, a user can also select any Starbucks branch and view more information a
 
 ![]()
 
-Sounds simple, but there is a lot happening under the hood, and you will almost certainly be introduced to new techniques which you can apply in your own applications.
+Sounds simple (and it is), but there is a lot happening under the hood, and you will almost certainly be introduced to new techniques which you can apply in your own applications.
 
 ## What you will learn
 
@@ -33,7 +33,7 @@ This book assumes that you already have a basic understanding of ASP.NET Core an
 **So what will you learn?**
 
 * Building a very simple, single page ASP.NET Razor Pages application.
-* Using AJAX requests in a ASP.NET Razor Pages application.
+* Using AJAX requests in an ASP.NET Razor Pages application.
 * Using MapBox (https://www.mapbox.com/) to display a map and add markers to the map
 * Handling a large amount of markers on a map using clusters.
 * Reading information from a CSV file.
