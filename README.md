@@ -1,28 +1,30 @@
 # Introduction
 
-There are many books and courses that will teach you ASP.NET Core. Most of them seem to be centred around developing some sort of CRUD (Create, read, update and delete) application. In other words they will show you to create an application which displays a list of items on a page, add new items to the list, view existing items, as well as update and delete items. Typically these applications are also backed by some sort of database in which aforemetioned items will be stored.
+There are many books and courses that will teach you ASP.NET Core. Most of them seem to be centred around developing some sort of CRUD (Create, read, update and delete) application. In other words, they will teach you how to create an application which displays a list of items on a page, add new items to the list, view existing items, as well as update and delete items. Typically these applications are also backed by some sort of database in which aforemetioned items will be stored.
 
 But that is **NOT** what you will learn in this book.
 
+I have nothing against developing CRUD applications - after all, most applications need to store information in a database. But I think there are many skills you require which fall outside the scope of a typical CRUD application. Skills like getting information from other sources, such as files, 3rd party APIs, etc.
+
+I also think there are more interesting ways in which to present information, that simply listing items in a grid. Displaying in on a map, for example, is much more interesting. And fun.
+
+So that is what this book is about. It is about developing a little fun application, which falls outside the norms of what you will typically find in other books and courses. And in the process teaches you some other valuable skills.
+
 ## What you will build
 
-This book is about developing an application which is a little bit more fun than displaying a list of items on the screen and then editing those items. 
-
-It is about learning techniques which falls outside the boundaries of your typical CRUD application.
-
-On a functional level this book will teach you how to build an application which displays a list of airports around the world on a map. 
+The basic premise of the application we will build is that it allows users to explore the various airports around the world on a map. 
 
 ![]()
 
-A user can zoom and pan the map, or navigate to a particular city using the search box 
+A user can zoom and pan the map, or navigate to a particular city using a search box.
 
 ![]()
 
-Finally, a user can also select any airport to view more information about it.
+A user can also select any airport to view more information about it.
 
 ![]()
 
-Sounds simple (and it is), but there is a lot happening under the hood, and you will almost certainly be introduced to new techniques which you can apply in your own applications.
+Sounds simple (and it is), but there are some interesting things happening under the hood and you will almost certainly be introduced to new techniques which you can apply in your own applications.
 
 ## What you will learn
 
@@ -30,7 +32,7 @@ Let me start off by saying that this book is **NOT** for people just starting of
 
 This book assumes that you already have a basic understanding of ASP.NET Core and C#. It also assumes that you can build a basic application using either Visual Studio, or the .NET Core command line tools along with a code editor such as Visual Studio Code.
 
-**So what will you learn?**
+In the course of this book, you will be learning the following:
 
 * Building a very simple, single page ASP.NET Razor Pages application.
 * Using AJAX requests in an ASP.NET Razor Pages application.
