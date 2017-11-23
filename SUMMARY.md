@@ -12,6 +12,7 @@
 
 * [Downloading a list of airports](/mapping/download/downloading.md)
 * [Displaying airports on the map](/mapping/display/display-airports.md)
-* [Clustering data with Mapbox]()
+* [Adding navigation controls](/mapping/map-navigation/navigation.md)
+* [Clustering data with Mapbox](mapping/clustering/clustering.md)
 
 ### Displaying Airport Information
