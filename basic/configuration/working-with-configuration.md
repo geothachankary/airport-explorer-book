@@ -12,7 +12,7 @@ By default ASP.NET Core will load the values from the `appsettings.json` file. I
 
 The current environment is set to **Development** because this is what is specified as the value of the `ASPNETCORE_ENVIRONMENT` environment variable of our application's properties:
 
-![]()
+![](properties.png)
 
 ASP.NET Core will therefore also load the values from the `appsettings.Development.json` file. If your environment was set to **Production**, it would have attempted to load the values from the `appsettings.Production.json` file.
 
@@ -40,7 +40,7 @@ ASP.NET Core allows us to access built-in framework services such as the configu
 
 You will find source code for your Razor Page in the code-behind file named `Index.cshtml.cs`. You may need to expand the `Index.cshtml` node in the **Solution Explorer** treeview to see this file:
 
-![]()
+![](solution-explorer.png)
 
 Right now this file will have the following contents:
 
