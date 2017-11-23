@@ -46,14 +46,11 @@ Open the `Index.cshtml` file, and replace all of the markup in the file with the
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Starbucks Explorer</title>
+    <title>Airport Explorer</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 <body>
-    <h1>Welcome to Airport Explorer!</h1>
+<h1>Welcome to Airport Explorer!</h1>
 </body>
 </html>
 ```
