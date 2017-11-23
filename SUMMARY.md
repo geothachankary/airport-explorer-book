@@ -6,7 +6,7 @@
 
 * [Creating a Razor Pages Application](basic/create-app/create-app.md)
 * [Registering with MapBox](/basic/register-mapbox/register-mapbox.md)
-* [Displaying the Map]()
+* [Working with Secrets](secrets/working-with-secrets.md)
 
 ### Mapping the Airports
 

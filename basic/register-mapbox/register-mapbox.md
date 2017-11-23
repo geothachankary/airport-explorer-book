@@ -69,7 +69,7 @@ Once you are done, your HTML should look something like the following:
 
 <script src='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js'></script>
 <script>
-    mapboxgl.accessToken = '...';
+    mapboxgl.accessToken = 'pk.eyJ1IjoiamVycmllcGVsc2VyIiwiYSI6ImNqYWJzZGthNDAyeDQzM29pYTFoY3hvYWoifQ.1oV15V4Q4r-RrSw-vU7JkA';
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v9'
@@ -79,6 +79,8 @@ Once you are done, your HTML should look something like the following:
 </html>
 ```
 
+> If you copy the code snippet above, please ensure that you replace the access token with the value of your own access token.
+
 You can go back to the Mapbox website and close it, or click on the **Next** button and explore a bit more of what is possible with Mapbox at your own leisure.
 
 ## Running the application
@@ -87,7 +89,7 @@ Let's run the application again:
 
 ![](run-app-small-map.png)
 
-You will notice that we have a small map in the top left corner, but it would be better to have the map fill the entire screen. For that we will include a bit of inline CSS styling in the page. Add the following snippet in the `<head>` section just before the closing `</head>` tag:
+You will notice that we have a small map in the top left corner, but it would be better to have the map fill the entire screen. For that we will include an internal CSS stylesheet in the page. Add the following snippet in the `<head>` section just before the closing `</head>` tag:
 
 ```html
 <style>
@@ -119,7 +121,7 @@ Also remove the `style` attribute from the `<div id='map'...` tag. Once done, th
 
 <script src='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js'></script>
 <script>
-    mapboxgl.accessToken ='...';
+    mapboxgl.accessToken ='pk.eyJ1IjoiamVycmllcGVsc2VyIiwiYSI6ImNqYWJzZGthNDAyeDQzM29pYTFoY3hvYWoifQ.1oV15V4Q4r-RrSw-vU7JkA';
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v9'
@@ -133,3 +135,6 @@ Now when we run the application again, you will notice that we have a map that f
 
 ![](run-app-full-map.png)
 
+> Broaden your knowledge:
+>
+> * Find out about the difference between [External style sheets, Internal style sheets and inline style](https://www.w3schools.com/CSS/css_howto.asp).
