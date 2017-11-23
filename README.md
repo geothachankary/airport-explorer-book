@@ -6,7 +6,7 @@ But that is **NOT** what you will learn in this book.
 
 I have nothing against developing CRUD applications - after all, most applications need to store information in a database. But I think there are many skills you require which fall outside the scope of a typical CRUD application. Skills like getting information from other sources, such as files, 3rd party APIs, etc.
 
-I also think there are more interesting ways in which to present information, that simply listing items in a grid. Displaying in on a map, for example, is much more interesting. And fun.
+I also think there are more interesting ways in which to present information, that simply listing items in a grid. Displaying it on a map, for example, is much more interesting. And fun.
 
 So that is what this book is about. It is about developing a little fun application, which falls outside the norms of what you will typically find in other books and courses. And in the process teaches you some other valuable skills.
 
@@ -34,7 +34,7 @@ This book assumes that you already have a basic understanding of ASP.NET Core an
 
 In the course of this book, you will be learning the following:
 
-* Building a very simple, single page ASP.NET Razor Pages application.
+* Building a very simple, one page ASP.NET Razor Pages application.
 * Using AJAX requests in an ASP.NET Razor Pages application.
 * Using MapBox (https://www.mapbox.com/) to display a map and add markers to the map
 * Handling a large amount of markers on a map using clusters.

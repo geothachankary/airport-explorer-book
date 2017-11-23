@@ -2,13 +2,11 @@
 
 In this section we will look at how to display the airports on the map. 
 
-The basic principle is that you can define a **data source** supplies data to be displayed on your map. There are various [different kinds of sources](https://www.mapbox.com/mapbox-gl-js/style-spec/#sources) you can specify, one of which is a [GeoJson](http://geojson.org/) source.
-
-Next you will need to add a [layer](https://www.mapbox.com/mapbox-gl-js/style-spec/#layers), which will display the data from the data source.
+The basic principle is that we can define a **data source** which supplies the data to be displayed on the map. There are various [different kinds of sources](https://www.mapbox.com/mapbox-gl-js/style-spec/#sources) we can specify, one of which is a [GeoJson](http://geojson.org/) source. After we have defined a data source we will need to add a **[layer](https://www.mapbox.com/mapbox-gl-js/style-spec/#layers)** to the map. The layer is the visual representation of the data obtained from the data source.
 
 ## Defining a Razor Page handler
 
-We will define a Razor Page handler which will return the information in GeoJson format to be displayed on the map. You already have one handler defined on our page model:
+We will define a Razor Page **handler** which will return the information in GeoJson format to be displayed on the map. We already have one handler defined in our page model:
 
 ```csharp
 // Index.cshtml.cs
@@ -40,7 +38,7 @@ public IActionResult OnGetAirports()
 }
 ```
 
-Assuming out website is hosted at `http://localhost:50158/`, we can invoke it by making the following HTTP GET request:
+Assuming our website is hosted at `http://localhost:50158/`, we can invoke it by making the following HTTP GET request:
 
 ```text
 http://localhost:50158/?handler=airports
@@ -57,13 +55,13 @@ public IActionResult OnGetAirports()
 
 ## Reading data from the CSV file
 
-The information we downloaded before is contained in comma-separated values (CSV) format. When returning the list of airports we will read it directly from the CSV. We can use a NuGet package called [CsvHelper](https://www.nuget.org/packages/CsvHelper/) to assist us with reading the information from the file. Go ahead and install that NuGet package:
+The information we downloaded before is contained in comma-separated values (CSV) format. When returning the list of airports we will read it directly from the CSV file. We can use a NuGet package called [CsvHelper](https://www.nuget.org/packages/CsvHelper/) to assist us with reading the information from the file. Go ahead and install that NuGet package:
 
 ```
 Install-Package CsvHelper
 ```
 
-We will also need to get the path to the file located in the `wwwroot` folder. In order to do that we can inject an instance of `IHostingEnvironment` into our class, and then use the [WebRootPath property](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.hosting.ihostingenvironment.webrootpath?view=aspnetcore-2.0) to access the physical location of the `wwwroot` folder.
+We will also need to get the path to the file located in the `wwwroot` folder. In order to do that we can inject an instance of `IHostingEnvironment` into our Razor Page class and then use the [WebRootPath property](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.hosting.ihostingenvironment.webrootpath?view=aspnetcore-2.0) to get the physical location of the `wwwroot` folder:
 
 ```csharp
 public class IndexModel : PageModel
@@ -82,9 +80,9 @@ public class IndexModel : PageModel
 }
 ```
 
-We can now open the `airports.dat` file using the `StreamReader` class and pass the stream to the constructor of the `CsvReader` class. We can then use the `CsvReader.Read()` method to read and iterate through the records of the CSV file. We can use the `CsvReaderGetField()` method to read the values for a particular record.
+We can now open the `airports.dat` file using the `StreamReader` class and pass the stream to the constructor of the `CsvReader` class. We can then use the `CsvReader.Read()` method to read and iterate through the records of the CSV file. We can use the `CsvReader.GetField<T>()` method to read the values for a particular record.
 
-In particular we are interested in the Name, IATA Code, Latitude and Longitude which were the 1st, 4th, 6th and 7th columns of the CSV file respectively.
+In particular we are interested in the **Name**, **IATA Code**, **Latitude** and **Longitude** fields which are columns at index 1, 4, 6 and 7 of the CSV file respectively (the first column is at index 0 so the second column, which is the Name column, is therefore at index 1):
 
 ```csharp
 public IActionResult OnGetAirports()
@@ -111,23 +109,25 @@ There is one tiny little problem, and that is that the `airports.dat` file escap
 
 > If double-quotes are used to enclose fields, then a double-quote appearing inside a field must be escaped by preceding it with another double quote.
 
-So in other words, if the name of an airport is `Magdeburg "City" Airport`, you should escape it as follows:
+So in other words, if the name of an airport is `Magdeburg "City" Airport`, it should be escaped as follows:
 
 ```
 332,"Magdeburg ""City"" Airport","Magdeburg","Germany",\N,"EDBM",52.073612,11.626389,259,1,"E","Europe/Berlin","airport","OurAirports"
 ```
 
-But the file we downloaded does not do that. Instead, double quotes are escaped using `\"`, e.g.:
+But the file we downloaded does not do that. Instead it escapes double quotes using the `\` character, for example:
 
 ```
 332,"Magdeburg \"City\" Airport","Magdeburg","Germany",\N,"EDBM",52.073612,11.626389,259,1,"E","Europe/Berlin","airport","OurAirports"
 ```
 
-The `CsvHelper` library also has no way for us to specify a different escape character (although there is an [open issue for this](https://github.com/JoshClose/CsvHelper/issues/834)). For now we need to specify a custom `Configuration` instance and specify a `BadDataFound` handler. We do not need to do anything with the bad data, but as long as we specify a handler, CsvHelper will call the handler instead of throwing and exception. That will allow us to at least suppress any parsing errors. 
+The `CsvHelper` library also has no way for us to specify a different escape character (although there is an [open issue for this](https://github.com/JoshClose/CsvHelper/issues/834)). For now we need to specify a custom `Configuration` instance and specify a `BadDataFound` handler. We do not need to do anything with the bad data, but as long as we specify a handler, CsvHelper will call the handler instead of throwing an exception. This will allow us to "silently" suppress any parsing errors.
 
-Even though we will "lose" some records because they cannot be parsed, this is more acceptable than having exceptions thrown and the parsing of the entire file being aborted.
+Unfortunately this means that any record (or row) containing an error will not be processed at all. Even though we will "lose" some records because of this, it is more acceptable than having exceptions thrown and the parsing of the entire file being aborted. 
 
-So adjust the current parsing code as follows:
+Of course you can also go and manually clean up the file we downloaded to correct any wrongly escaped double quotes and thus ensuring that the entire file be processed correctly. If this was a production system we were writing, then that would be the preferable course of action to take. But, since this is a little demo app we are writing, we are not going to worry about it too much.
+
+For now we will suppress parsing errors by updating the code as follows:
 
 ```csharp
 public IActionResult OnGetAirports()
@@ -189,7 +189,7 @@ public IActionResult OnGetAirports()
 }
 ```
 
-Let's run our application again, and in the browser and pass the `handler=airports` query string:
+Let's run our application again and in the browser and pass the `handler=airports` query string:
 
 ![](geojson.png)
 
@@ -288,7 +288,7 @@ This is what the full final markup for our page looks like:
 </html>
 ```
 
-And all that is left now is for us to run the application again. This time you should see a bunch of circles being displayed on the map, each of which represents an individual airport:
+It is time to compile and run the application again. This time you should see a bunch of circles being displayed on the map, each of which represents an individual airport:
 
 ![](airport-map.png)
 

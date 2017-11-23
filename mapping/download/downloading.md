@@ -1,6 +1,6 @@
 # Downloading the list of airports
 
-We will need a list of airports to display on our map. Thankfully a free data set containing the list of airports around the world is available on the [OpenFlights website](https://openflights.org/). The free versions of their data sets are not very up to date, but it is recent enough for us to use. And it contains a nice set of data used for mapping.
+We will need a list of airports to display on our map. Thankfully a free data set containing the list of airports around the world is available on the [OpenFlights website](https://openflights.org/). The free versions of their data sets are not very up to date, but it is recent enough for us to use.
 
 Go to https://openflights.org/data.html and scroll down the page a bit until you see the link to the `airports.dat` download:
 
@@ -39,4 +39,4 @@ Field | Description
 **Type** | Type of the airport. Value "airport" for air terminals, "station" for train stations, "port" for ferry terminals and "unknown" if not known. In airports.csv, only type=airport is included.
 **Source** | Source of this data. "OurAirports" for data sourced from OurAirports, "Legacy" for old data not matched to OurAirports (mostly DAFIF), "User" for unverified user contributions. In airports.csv, only source=OurAirports is included.
 
-We will work with this file in a bit, but next we'll take a quick look at how to display information on a Mapbox map.
+We will work with this next when we take a quick look at how to display information on a Mapbox map.

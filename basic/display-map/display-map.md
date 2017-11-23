@@ -1,12 +1,14 @@
-# Registering with MapBox
+# Displaying the map
+
+## Creating a Mapbox account
 
 MapBox is a service which allows you to embed maps in your application. It is very similar to using Google Maps, but I prefer it due to its easier to use API.
 
-The first thing we need to is to create a MapBox account, which you can do by going to https://www.mapbox.com/signup/. Go ahead and complete the sign up form by specifying a username, email address and password:
+The first thing we need to do is to create a MapBox account which you can do by going to https://www.mapbox.com/signup/. Go ahead and complete the sign up form by specifying a username, email address and password:
 
 ![](mapbox-signup.png)
 
-Next, you will be walked through the onboarding process. Select **Web**:
+Next, you will be taken through the onboarding process. Select **Web** as the SDK you want to use:
 
 ![](mapbox-onboarding-1.png)
 
@@ -131,7 +133,7 @@ Also remove the `style` attribute from the `<div id='map'...` tag. Once done, th
 </html>
 ```
 
-Now when we run the application again, you will notice that we have a map that fills the entire web page:
+Now, when we run the application again, you will notice that we have a map that fills the entire web page:
 
 ![](run-app-full-map.png)
 

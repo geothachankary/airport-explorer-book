@@ -4,9 +4,9 @@
 
 ### Creating a Basic Map
 
-* [Creating a Razor Pages Application](/basic/create-app/create-app.md)
-* [Registering with MapBox](/basic/register-mapbox/register-mapbox.md)
-* [Loading values from a configuration file](/basic/configuration/working-with-configuration.md)
+* [Creating a Razor Pages application](/basic/create-app/create-app.md)
+* [Displaying a map](/basic/display-map/display-map.md)
+* [using configuration files](/basic/configuration/working-with-configuration.md)
 
 ### Mapping the Airports
 

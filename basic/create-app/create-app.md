@@ -6,19 +6,19 @@ We will be using [ASP.NET Razor Pages](https://docs.microsoft.com/en-us/aspnet/c
 
 With ASP.NET MVC you would create a _Controller_ with _Actions_, and then create _Views_ which can be returned but those actions. These files would live across multiple folders. 
 
-With Razor Pages, however, your _HTML markup_ for a page and a _C# "code-behind" file_ for that page that live together in a directory next to each other. Many developers believe that this makes things a bit more organized and easier to find your way around a project.
+With Razor Pages, however, your _HTML markup_ for a page and a _C# "code-behind" file_ for that page live together in a directory next to each other. Many developers believe that this makes things a bit more organized and easier to find your way around a project.
 
-Because of this simpler programming model and because our application will consist of a single page, I will be using Razor pages. There are also a few tricks I want to highlight in terms of Razor pages, such as defining multiple _handlers_ for a page.
+Because of this simpler programming model and because our application will consist of a single page, I will be using Razor pages. There are also a few tricks I want to highlight in terms of Razor pages, such as defining multiple _handlers_ and _custom routing_ for a page.
 
 > For more information on Razor Pages I suggest reading [Introduction to Razor Pages in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/mvc/razor-pages/) and work through the [Getting started with Razor Pages in ASP.NET Core tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start).
 
 ## Create a New Razor Pages Project
 
-To create the new project you can go to** File > New > Project**. Under the **Visual C# > .NET Core** node, select **ASP.NET Core Web Application**. Give the application a name of **AirportExplorer** and select the location where you want to save the application.
+To create the new project you can go to the **File** menu and select **New > Project**. Under the **Visual C# > .NET Core** node, select **ASP.NET Core Web Application**. Give the application a name of **AirportExplorer** and select the location where you want to save the application.
 
 ![](new-project.png)
 
-On the next screen, ensure that you have selected **.NET Core** and **ASP.NET Core 2.0** in the two dropdowns at the top. The select **Web Application**, ensure that you have specified **No Authentication** and do not enabled Docker Support. Click **OK**.
+On the next screen, ensure that you have selected **.NET Core** and **ASP.NET Core 2.0** in the two dropdowns at the top. The select **Web Application**, ensure that you have specified **No Authentication** and do not enable Docker Support. Click **OK**.
 
 ![](new-aspnet-application.png)
 
@@ -30,7 +30,7 @@ If you look at the project in Solution Explorer, you will notice that the projec
 
 ![](solution-explorer.png)
 
-A lot of this is not needed for our simple, one page application, so go ahead and get rid of the `css`, `images`, `js` and `lib` folders. Also get rid of the `_Layout.cshtml`, `_ValidationScriptsPartial.cshtml`, `_ViewStart.cshtml`, `About.cshtml`, `Contact.cshtml` and `Error.cshtml` files. These last three files will also contain code-behind files (for example `About.cshtml` will also have a code-behind file named `About.cshtml.cs`), so be sure to delete those as well.
+A lot of this is not needed for our simple, one page application, so go ahead and delete the `css`, `images`, `js` and `lib` folders. Also delete the `_Layout.cshtml`, `_ValidationScriptsPartial.cshtml`, `_ViewStart.cshtml`, `About.cshtml`, `Contact.cshtml` and `Error.cshtml` files. These last three files will also contain code-behind files (for example `About.cshtml` will also have a code-behind file named `About.cshtml.cs`), so be sure to delete those as well.
 
 Once you are done, this is what the project will look like:
 

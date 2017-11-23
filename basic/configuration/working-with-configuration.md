@@ -16,7 +16,7 @@ The current environment is set to **Development** because this is what is specif
 
 ASP.NET Core will therefore also load the values from the `appsettings.Development.json` file. If your environment was set to **Production**, it would have attempted to load the values from the `appsettings.Production.json` file.
 
-Let's add a **Mapbox** object to `appsettings.Development.json` with a **AccessToken** member with the value of the access token:
+Let's add a **Mapbox** object to `appsettings.Development.json` with an **AccessToken** member with the value of the access token:
 
 ```json
 {
@@ -62,13 +62,13 @@ namespace AirportExplorer.Pages
 
 We will need to add a constructor with a `configuration` parameter of type `IConfiguration`. At runtime the dependency injection system will inject an instance of `IConfiguration` which we can then use to read values from the configuration.
 
-To read values from the `configuration` object, we can use an indexer and specify the key of the configuration value we want to read. So for example, if we wanted to read a configuration value with the key `secret`, we could write the following code:
+To read values from the `configuration` object, we can use an [indexer](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/using-indexers) and specify the key of the configuration value we want to read. So for example, if we wanted to read a configuration value with the key `secret`, we could write the following code:
 
 ```csharp
 string secret = configuration["secret"];
 ```
 
-Because we specified the configuration values in our `appsettings.Development.json` in a hierarchical structure, we can use the `:` character to delimit the different tree nodes when specifying the key we want to read. So to read the Mapbox access token we specified before we can use `Mapbox:AccessToken` as the key.
+Because we specified the configuration values in our `appsettings.Development.json` in a hierarchical structure, we can use a colon (the `:` character) to delimit the different tree nodes when specifying the key we want to read. So to read the Mapbox access token we specified before we can use `Mapbox:AccessToken` as the key.
 
 This is what the code for our `IndexModel` class looks like once we are done:
 
@@ -95,7 +95,7 @@ namespace AirportExplorer.Pages
 }
 ```
 
-Notice that we specified a `MapboxAccessToken` property on the `IndexModel` class in which we store the value we read from the configuration. We can now read the property directly from our page model. Update the `Index.cshtml` as follows:
+Notice that we specified a `MapboxAccessToken` property on the `IndexModel` class in which we store the value we read from the configuration. We can now use the property directly from our page model. Update the `Index.cshtml` as follows:
 
 ```html
 @page
@@ -128,3 +128,4 @@ Notice the call to `@Model.MapboxAccessToken`, which read the value of the Mapbo
 > * [Working with multiple environments](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments)
 > * [Configure an ASP.NET Core Application](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration)
 > * [Exploring Program.cs, Startup.cs and CreateDefaultBuilder in ASP.NET Core 2 preview 1](Exploring Program.cs, Startup.cs and CreateDefaultBuilder in ASP.NET Core 2 preview 1)
+> * [Using Indexers in C#](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/using-indexers)
