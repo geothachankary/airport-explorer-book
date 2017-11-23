@@ -111,7 +111,13 @@ There is one tiny little problem, and that is that the `airports.dat` file escap
 
 > If double-quotes are used to enclose fields, then a double-quote appearing inside a field must be escaped by preceding it with another double quote.
 
-But the file we downloaded does not do that. For example in the version I downloaded, double quotes are escaped using `\"`, e.g.:
+So in other words, if the name of an airport is `Magdeburg "City" Airport`, you should escape it as follows:
+
+```
+332,"Magdeburg ""City"" Airport","Magdeburg","Germany",\N,"EDBM",52.073612,11.626389,259,1,"E","Europe/Berlin","airport","OurAirports"
+```
+
+But the file we downloaded does not do that. Instead, double quotes are escaped using `\"`, e.g.:
 
 ```
 332,"Magdeburg \"City\" Airport","Magdeburg","Germany",\N,"EDBM",52.073612,11.626389,259,1,"E","Europe/Berlin","airport","OurAirports"
@@ -119,7 +125,7 @@ But the file we downloaded does not do that. For example in the version I downlo
 
 The `CsvHelper` library also has no way for us to specify a different escape character (although there is an [open issue for this](https://github.com/JoshClose/CsvHelper/issues/834)). For now we need to specify a custom `Configuration` instance and specify a `BadDataFound` handler. We do not need to do anything with the bad data, but as long as we specify a handler, CsvHelper will call the handler instead of throwing and exception. That will allow us to at least suppress any parsing errors. 
 
-Even though we will "lose" some data, this is a more acceptable compromise than having exceptions thrown and the entire parsing being stopped.
+Even though we will "lose" some records because they cannot be parsed, this is more acceptable than having exceptions thrown and the parsing of the entire file being aborted.
 
 So adjust the current parsing code as follows:
 
