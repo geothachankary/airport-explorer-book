@@ -10,5 +10,8 @@
 
 ### Mapping the Airports
 
+* [Downloading a list of airports](/mapping/download/downloading.md)
+* [Displaying airports on the map]()
+* [Clustering data with Mapbox]()
 
 ### Displaying Airport Information
