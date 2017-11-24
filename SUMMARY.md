@@ -19,3 +19,4 @@
 ### Displaying Airport Information
 
 * [Display airport name on hover](/info/hover/hover.md)
+* [Display an information card](/info/card/card.md)
