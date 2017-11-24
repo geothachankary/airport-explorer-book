@@ -1,4 +1,4 @@
-# clustering data with Mapbox
+# Clustering data with Mapbox
 
 It is great that we finally are making progress and have visual feedback of that progress, but damn! That is a lot of information being displayed on the map and it does not really look very good.
 
