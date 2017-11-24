@@ -2,7 +2,7 @@
 
 The information we are currently displaying about an airport is limited to the airport name and IATA code. As you have seen when we designed the info card, we left a placeholder to place an image of the airport. We can also add more information about each airport such as the address, phone number, website address, etc.
 
-To get this information we will be using the [Google Places API](https://developers.google.com/places/). 
+To get this information we will be using the [Google Places API](https://developers.google.com/places/). We will need to create a project in the [Google Developer Console](https://console.developers.google.com) and create an API Key which we can use to call the Google Places API.
 
 Ensure that you have signed into your Google account and head over to https://console.developers.google.com/projectselector/apis/library. Click on the button to **Create** a project.
 
