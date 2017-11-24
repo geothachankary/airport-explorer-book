@@ -1,12 +1,14 @@
 # Introduction
 
-There are many books and courses that will teach you ASP.NET Core. Most of them seem to be centred around developing some sort of CRUD (Create, read, update and delete) application. In other words, they will teach you how to create an application which displays a list of items on a page, add new items to the list, view existing items, as well as update and delete items. Typically these applications are also backed by some sort of database in which aforemetioned items will be stored.
+Along with the introduction of ASP.NET Core, Microsoft has really upped their game and [provided very good documentation](https://docs.microsoft.com/en-us/aspnet/core/). While this documentation serves as a good technical reference, it does not demonstrate how to build an application end-to-end. 
+
+Microsoft does however provide [tutorials](https://docs.microsoft.com/en-us/aspnet/core/tutorials/), many of which do indeed take you through the process of building a small application. At the same time there are also many books and courses that will teach you ASP.NET Core. Along with the Microsoft provided tutorials, most of these courses seem to be centred around developing some sort of simple CRUD (Create, read, update and delete) application. In other words, they will teach you how to create an application which displays a list of items on a page, add new items to the list, view existing items, as well as update and delete items. Typically these applications are also backed by some form of database in which aforemetioned items will be stored.
 
 But that is **NOT** what you will learn in this book.
 
 I have nothing against developing CRUD applications - after all, most applications need to store information in a database. But I think there are many skills you require which fall outside the scope of a typical CRUD application. Skills like getting information from other sources, such as files, 3rd party APIs, etc.
 
-I also think there are more interesting ways in which to present information, that simply listing items in a grid. Displaying it on a map, for example, is much more interesting. And fun.
+I also think there are more interesting ways in which to present information than simply listing items in a grid. Displaying it on a map, for example, is much more interesting. And fun.
 
 So that is what this book is about. It is about developing a little fun application, which falls outside the norms of what you will typically find in other books and courses. And in the process teaches you some other valuable skills.
 
