@@ -7,7 +7,7 @@
 
 * [Creating a Razor Pages application](/basic/create-app/create-app.md)
 * [Displaying a map](/basic/display-map/display-map.md)
-* [using configuration files](/basic/configuration/working-with-configuration.md)
+* [Using configuration files](/basic/configuration/working-with-configuration.md)
 
 ### Mapping the Airports
 

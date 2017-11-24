@@ -1,4 +1,4 @@
-# Loading values from a configuration file
+# Using configuration files
 
 The code snippet from Mapbox which we included in our page contains the Mapbox **access token**. This access token is used by Mapbox to associate any API request being made to Mapbox - in this case by the JavaScript SDK - to your Mapbox account. 
 
