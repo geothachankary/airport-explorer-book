@@ -20,3 +20,5 @@
 
 * [Display airport name on hover](/info/hover/hover.md)
 * [Display an information card](/info/card/card.md)
+* [Generate a Google API Key](/info/google/google.md)
+* [Storing Secrets](/info/secrets/secrets.md)
