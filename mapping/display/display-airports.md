@@ -157,7 +157,7 @@ Now that we are processing the data from the CSV file correctly we can construct
 Install-Package GeoJSON.Net
 ```
 
-We will create a `FeatureCollection` instance and then for each of the records in the CSV file add a new `Feature` instance to the collection. Each `Feature` instance will contain a `Point` with the coordinates of the airport, as well second parameter which is an anonymous object with some extra properties we want to add. In our case we can add the **Name** and **IATA code** of the airport to this collection. Finally we can return a JSON payload containing the collection.
+We will create a `FeatureCollection` instance and then for each of the records in the CSV file add a new `Feature` instance to the collection. Each `Feature` instance will contain a `Point` with the coordinates of the airport, as well second parameter which is a dictionary with extra properties we want to add. In our case we can add the **Name** and **IATA code** of the airport. Finally, we can return a JSON payload containing the collection.
 
 ```csharp
 public IActionResult OnGetAirports()
@@ -181,7 +181,11 @@ public IActionResult OnGetAirports()
 
             featureCollection.Features.Add(new Feature(
                 new Point(new Position(latitude, longitude)),
-                new {Name = name, IataCode = iataCode}));
+                new Dictionary<string, object>
+                {
+                    {"name", name},
+                    {"iataCode", iataCode}
+                }));
         }
 
         return new JsonResult(featureCollection);
@@ -291,6 +295,14 @@ This is what the full final markup for our page looks like:
 It is time to compile and run the application again. This time you should see a bunch of circles being displayed on the map, each of which represents an individual airport:
 
 ![](airport-map.png)
+
+## Mapbox Terminology
+
+Before we finish off this section, I just want to cover the Mapbox terminology again as I will use this terminology a lot moving forward. 
+
+First off, we have a **data source** - in our case a **GeoJson** data source which returns a list of airports. More specifically, it returns a **collection of features**. In other words each feature represents an airport. It contains the coordinates of the feature, as well as some extra properties we specified. In our case the extra properties were the name and IATA code of each airport.
+
+Next we have a layer. The layer is linked to a data source. When we added the layer we specified that the layer will draw little green circles which represents each of the features from the data source. So in other words, each of those green circles on the map represents an airport.
 
 > Read more
 >
