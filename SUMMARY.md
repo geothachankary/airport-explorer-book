@@ -1,6 +1,6 @@
 # Summary
 
-* [Format of this book](/format/md)
+* [Format of this book](/format.md)
 * [Prerequisites](/prerequisites.md)
 
 ### Creating a Basic Map
