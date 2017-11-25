@@ -1,6 +1,5 @@
 # Summary
 
-* [Format of this book](/format.md)
 * [Getting Started](basic/readme.md)
     * [Creating a Razor Pages application](/basic/create-app/create-app.md)
     * [Displaying a map](/basic/display-map/display-map.md)
