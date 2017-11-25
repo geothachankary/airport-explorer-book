@@ -1,8 +1,6 @@
 # Displaying airport information on hover
 
-Currently we indicate the various airports on the map, but a user has no way to get more information about a particular airport. The first thing we will do is to provide a tooltip when a user hover over a particular airport marker.
-
-Thankfully the MapBox SDK comes to our rescue again, and supplies us with a [popup component](https://www.mapbox.com/mapbox-gl-js/api#popup) we can use. Inside the `load` handler we created before, after you have added the data source and layers, declare a new instance of this component:
+The MapBox SDK provides a [popup component](https://www.mapbox.com/mapbox-gl-js/api#popup) we can use to display a tooltip when the user hovers the mouse over an airport marker. Inside the `load` handler we created before, after you have added the data source and layers, declare a new instance of this component:
 
 ```js
 map.on('load', () => {

@@ -1,18 +1,4 @@
-# Creating a Razor Pages Application
-
-## Quick Razor Pages intro
-
-We will be using [ASP.NET Razor Pages](https://docs.microsoft.com/en-us/aspnet/core/mvc/razor-pages/) to build the application. Razor Pages was added in ASP.NET Core 2.0 with the aim of simplifying developing simple web pages with some code behind them. 
-
-With ASP.NET MVC you would create a _Controller_ with _Actions_, and then create _Views_ which can be returned but those actions. These files would live across multiple folders. 
-
-With Razor Pages, however, your _HTML markup_ for a page and a _C# "code-behind" file_ for that page live together in a directory next to each other. Many developers believe that this makes things a bit more organized and easier to find your way around a project.
-
-Because of this simpler programming model and because our application will consist of a single page, I will be using Razor pages. There are also a few tricks I want to highlight in terms of Razor pages, such as defining multiple _handlers_ and _custom routing_ for a page.
-
-I will not be going into too much of the technical details of Razor Pages, so I suggest reading [Introduction to Razor Pages in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/mvc/razor-pages/) and perhaps work through the [Getting started with Razor Pages in ASP.NET Core tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start) if you are unfamiliar with it.
-
-## Create a new Razor Pages project
+# Creating a new Razor Pages project
 
 To create the new project you can go to the **File** menu and select **New > Project**. Under the **Visual C# > .NET Core** node, select **ASP.NET Core Web Application**. Give the application a name of **AirportExplorer** and select the location where you want to save the application.
 

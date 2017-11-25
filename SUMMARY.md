@@ -1,24 +1,18 @@
 # Summary
 
 * [Format of this book](/format.md)
-* [Prerequisites](/prerequisites.md)
-
-### Creating a Basic Map
-
-* [Creating a Razor Pages application](/basic/create-app/create-app.md)
-* [Displaying a map](/basic/display-map/display-map.md)
-* [Using configuration files](/basic/configuration/working-with-configuration.md)
-
-### Mapping the Airports
-
-* [Downloading a list of airports](/mapping/download/downloading.md)
-* [Displaying airports on the map](/mapping/display/display-airports.md)
-* [Adding navigation controls](/mapping/map-navigation/navigation.md)
-* [Clustering data with Mapbox](mapping/clustering/clustering.md)
-
-### Displaying Airport Information
-
-* [Display airport name on hover](/info/hover/hover.md)
-* [Display an information card](/info/card/card.md)
-* [Generate a Google API Key](/info/google/google.md)
-* [Storing Secrets](/info/secrets/secrets.md)
+* [Getting Started](basic/readme.md)
+    * [Creating a Razor Pages application](/basic/create-app/create-app.md)
+    * [Displaying a map](/basic/display-map/display-map.md)
+    * [Using configuration files](/basic/configuration/working-with-configuration.md)
+* [Mapping the Airports](/mapping/readme.md)
+    * [Downloading a list of airports](/mapping/download/downloading.md)
+    * [Displaying airports on the map](/mapping/display/display-airports.md)
+    * [Adding navigation controls](/mapping/map-navigation/navigation.md)
+    * [Clustering data with Mapbox](mapping/clustering/clustering.md)
+* [Displaying Airport Information](/info/readme.md)
+    * [Display airport name on hover](/info/hover/hover.md)
+    * [Display an information card](/info/card/card.md)
+* [Using the Google Places API](/google-places/readme.md)
+    * [Generating an API Key](/google-places/signup/signup.md)
+    * [How we'll use the API](/google-places/understanding/understanding.md)

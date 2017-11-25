@@ -1,4 +1,34 @@
-# Storing Secrets
+# Generating a Google Places API Key
+
+We will need to create a project in the [Google Developer Console](https://console.developers.google.com) and create an API Key which we can use to call the Google Places API. Ensure that you have signed into your Google account and head over to https://console.developers.google.com/projectselector/apis/library. Click on the button to **Create** a project.
+
+![](google-1.png)
+
+Give the project a name of **Airport Explorer** and then click on **Create**:
+
+![](google-2.png)
+
+Once the project has been created, search for **google places**, and then click to select **Google Places API Web Service**:
+
+![](google-3.png)
+
+Next, click on the button to **Enable** this service:
+
+![](google-4.png)
+
+Once the service is enabled, click on **Create Credentials**:
+
+![](google-5.png)
+
+Click on **What credentials do I need?**:
+
+![](google-6.png)
+
+This will create an **API Key** for you. Copy that API key, as you will need it to call the Google Places API. Finally you can click on the **Done** button.
+
+![](google-7.png)
+
+## Storing Secrets
 
 Since the Google API Key is secret, we should not be storing it in our source code, and also not in one of our configration files which may be checked into our source control system at a later stage. Thankfully ASP.NET Core gives us an easy way to manage secrets in our application and allow us to access them through the normal ASP.NET Core configuration service. 
 

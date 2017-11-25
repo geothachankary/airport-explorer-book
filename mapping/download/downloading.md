@@ -1,7 +1,5 @@
 # Downloading the list of airports
 
-We will need a list of airports to display on our map. Thankfully a free data set containing the list of airports around the world is available on the [OpenFlights website](https://openflights.org/). The free versions of their data sets are not very up to date, but it is recent enough for us to use.
-
 Go to https://openflights.org/data.html and scroll down the page a bit until you see the link to the `airports.dat` download:
 
 ![](openflights.png)
