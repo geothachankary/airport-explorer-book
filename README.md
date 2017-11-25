@@ -1,24 +1,24 @@
 # Introduction
 
-Along with the introduction of ASP.NET Core, Microsoft has really upped their game and [provided very good documentation](https://docs.microsoft.com/en-us/aspnet/core/). While this documentation serves as a good technical reference, it does not demonstrate how to build an application end-to-end. 
+Microsoft provides [very good technical documentation](https://docs.microsoft.com/en-us/aspnet/core/) for ASP.NET Core. They also provide sevaral [tutorials](https://docs.microsoft.com/en-us/aspnet/core/tutorials/) demonstrating how to build a fairly basic application.
 
-Microsoft does however provide [tutorials](https://docs.microsoft.com/en-us/aspnet/core/tutorials/), many of which do indeed take you through the process of building a small application. At the same time there are also many books and courses that will teach you ASP.NET Core. Along with the Microsoft provided tutorials, most of these courses seem to be centred around developing some sort of simple CRUD (Create, read, update and delete) application. In other words, they will teach you how to create an application which displays a list of items on a page, add new items to the list, view existing items, as well as update and delete items. Typically these applications are also backed by some form of database in which aforemetioned items will be stored.
+There are also many books and courses that will teach you ASP.NET Core. Along with the Microsoft provided tutorials, most of these courses seem to be centred around developing some sort of simple CRUD (Create, read, update and delete) application. In other words, they will teach you how to create an application which displays a list of items on a page, add new items to the list, view existing items, as well as update and delete items. Typically these applications are also backed by some form of database in which aforemetioned items will be stored.
 
 But that is **NOT** what you will learn in this book.
 
-I have nothing against developing CRUD applications - after all, most applications need to store information in a database. But I think there are many skills you require which fall outside the scope of a typical CRUD application. Skills like getting information from other sources, such as files, 3rd party APIs, etc.
+I have nothing against developing CRUD applications. I think it is a very good starting point and after all, most applications need to store information in a database. But I think there are many skills you require which fall outside the scope of a typical CRUD application. Skills like getting information from other sources, such as files, 3rd party APIs, etc.
 
 I also think there are more interesting ways in which to present information than simply listing items in a grid. Displaying it on a map, for example, is much more interesting. And fun.
 
-So that is what this book is about. It is about developing a little fun application, which falls outside the norms of what you will typically find in other books and courses. And in the process teaches you some other valuable skills.
+So that is what this book is about. To be sure, this is also a very simple application we will be building. But it will be a different kind of simple application than what the typical tutorials demonstrate. And you will learn a very different set of skills and techniques.
 
 ## What you will build
 
-The basic premise of the application we will build is that it allows users to explore the various airports around the world on a map. 
+The basic premise of the application we will build is that it allow users to explore the various airports around the world on a map. 
 
 ![]()
 
-A user can zoom and pan the map, or navigate to a particular city using a search box.
+A user can zoom and pan the map or navigate to a particular city using a search box.
 
 ![]()
 
@@ -48,6 +48,4 @@ In the course of this book, you will be learning the following:
 * Using the Tailwind CSS framework (https://tailwindcss.com/) to style HTML.
 * Probably some more cool things I cannot think of right now... 😉
 
-Does this sound like fun to you? A bit more exciting than your typical "_let's display a list of items in a list_" tutorial?
-
-If so, then let's dig in!
+Does this sound like fun to you? If so, then let's dig in!
