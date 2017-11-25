@@ -20,7 +20,10 @@ Let's create a key named `Google` and a sub-key under that named `ApiKey` with t
 
 To access that value, we can use the exact same mechanism as before to inject an `IConfiguration` instance into our class constructor, and then use `configuration["Google:ApiKey"]` to access the value. Don't worry about doing that now though - we will get to that later.
 
-> More Information
->
-> * [Safe storage of app secrets during development in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?tabs=visual-studio)
-> * [Managing Secrets in .NET CORE 2.0 Apps](https://blogs.msdn.microsoft.com/mihansen/2017/09/10/managing-secrets-in-net-core-2-0-apps/)
+{% hint style='tip' %}
+**Learn more**
+
+* [Safe storage of app secrets during development in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?tabs=visual-studio)
+* [Managing Secrets in .NET CORE 2.0 Apps](https://blogs.msdn.microsoft.com/mihansen/2017/09/10/managing-secrets-in-net-core-2-0-apps/)
+
+{% endhint %}

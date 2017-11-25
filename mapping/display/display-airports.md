@@ -304,8 +304,11 @@ First off, we have a **data source** - in our case a **GeoJson** data source whi
 
 Next we have a layer. The layer is linked to a data source. When we added the layer we specified that the layer will draw little green circles which represents each of the features from the data source. So in other words, each of those green circles on the map represents an airport.
 
-> Read more
->
-> * Read about [sources in the Mapbox documentation](https://www.mapbox.com/mapbox-gl-js/style-spec/#sources)
-> * Read about [layers in the Mapbox documentation](https://www.mapbox.com/mapbox-gl-js/style-spec/#layers)
-> * The [GeoJson Specification](http://geojson.org/)
+{% hint style='tip' %}
+**Learn more**
+
+* [Mapbox data sources](https://www.mapbox.com/mapbox-gl-js/style-spec/#sources)
+* [Mapbox layers](https://www.mapbox.com/mapbox-gl-js/style-spec/#layers)
+* [GeoJson Specification](http://geojson.org/)
+
+{% endhint %}

@@ -137,6 +137,9 @@ Now, when we run the application again, you will notice that we have a map that 
 
 ![](run-app-full-map.png)
 
-> Broaden your knowledge:
->
-> * Find out about the difference between [External style sheets, Internal style sheets and inline style](https://www.w3schools.com/CSS/css_howto.asp).
+{% hint style='tip' %}
+**Learn more**
+
+* [The difference between external style sheets, internal style sheets and inline style](https://www.w3schools.com/CSS/css_howto.asp)
+
+{% endhint %}

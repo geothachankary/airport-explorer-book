@@ -123,9 +123,12 @@ Notice that we specified a `MapboxAccessToken` property on the `IndexModel` clas
 
 Notice the call to `@Model.MapboxAccessToken`, which read the value of the Mapbox access token from the `MapboxAccessToken` property on the page model.
 
-> Learn more
-> 
-> * [Working with multiple environments](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments)
-> * [Configure an ASP.NET Core Application](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration)
-> * [Exploring Program.cs, Startup.cs and CreateDefaultBuilder in ASP.NET Core 2 preview 1](Exploring Program.cs, Startup.cs and CreateDefaultBuilder in ASP.NET Core 2 preview 1)
-> * [Using Indexers in C#](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/using-indexers)
+{% hint style='tip' %}
+**Learn more**
+
+* [Working with multiple environments](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments)
+* [Configure an ASP.NET Core Application](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration)
+* [Exploring Program.cs, Startup.cs and CreateDefaultBuilder in ASP.NET Core 2 preview 1](Exploring Program.cs, Startup.cs and CreateDefaultBuilder in ASP.NET Core 2 preview 1)
+* [Using Indexers in C#](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/using-indexers)
+
+{% endhint %}
