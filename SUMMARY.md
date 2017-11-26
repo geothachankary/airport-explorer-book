@@ -15,3 +15,7 @@
 * [Using the Google Places API](/google-places/readme.md)
     * [Generating an API Key](/google-places/signup/signup.md)
     * [How we'll use the API](/google-places/understanding/understanding.md)
+    * [Retrieving the information](/google-places/retrieving/retrieving.md)
+    * [Displaying the information](/google-places/displaying/displaying.md)
+* [Conclusion](/conclusion.md)
+* [Feedback](/feedback.md)

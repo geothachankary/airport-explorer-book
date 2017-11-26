@@ -15,3 +15,7 @@ Please note that for the purpose of this book I will demonstrate using Visual St
 I am trying to keep this book focused on building the application and not deviate too much into deeper technical discussions. But I also do understand that in many instances there will be some of you who are unfamiliar with the concepts being discussed, or would like to explore a particular subject in more detail.
 
 As such I will link to relevant reference materials from Microsoft and other sources where available so you can explore in more detail at your own leisure. You can find these links either in-line or in the "Learn More" section included in some sections.
+
+## Source Code
+
+Source code for this project is available at [https://github.com/jerriep/airport-explorer-source](https://github.com/jerriep/airport-explorer-source).
