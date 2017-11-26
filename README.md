@@ -16,15 +16,15 @@ So that is what this book is about. To be sure, this is also a very simple appli
 
 The basic premise of the application we will build is that it allow users to explore the various airports around the world on a map. 
 
-![]()
+![](map.png)
 
 A user can zoom and pan the map or navigate to a particular city using a search box.
 
-![]()
+![](search.png)
 
 A user can also select any airport to view more information about it.
 
-![]()
+![](seattle-tacoma.png)
 
 Sounds simple (and it is), but there are some interesting things happening under the hood and you will almost certainly be introduced to new techniques which you can apply in your own applications.
 
