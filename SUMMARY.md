@@ -17,5 +17,7 @@
     * [How we'll use the API](/google-places/understanding/understanding.md)
     * [Retrieving the information](/google-places/retrieving/retrieving.md)
     * [Displaying the information](/google-places/displaying/displaying.md)
+* [Adding finishing touches](finishing-touces/readme.md)
+    * [Using GeoIP location](/finishing-touces/geoip/geoip.md)
 * [Conclusion](/conclusion.md)
 * [Feedback](/feedback.md)
