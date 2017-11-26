@@ -2,10 +2,10 @@
 
 We have no certain way to link an airport in our downloaded CSV file to a specific Google Place. However, one of the API endpoints available allow us to search for a place near a specific coordinates (i.e. the latitude and longitude). We already have the name of the airport as well as its coordinates, so using the [Nearby Search Request](https://developers.google.com/places/web-service/search#PlaceSearchRequests) endpoint, we can search for places matching a search term (in this case the airport name) within a certain radius of the coordinates.
 
-Let's demonstrate this by calling the endpoint and searching for **Suvarnabhumi Airport**. We can specify the coordinates as the `location`, the name of the airport as the `keyword`, specifying a `radius` of 1000 meters and set the `type` parameter to `airport` to ensure that we only search for airports:
+Let's demonstrate this by calling the endpoint and searching for **Suvarnabhumi Airport**. We can specify the coordinates as the `location`, the name of the airport as the `name`, specifying a `radius` of 1000 meters and set the `type` parameter to `airport` to ensure that we only search for airports:
 
 ```text
-https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=[YOUR API KEY]Q&location=13.681099891662598,100.74700164794922&radius=1000&keyword=Suvarnabhumi Airport&type=airport
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=[YOUR API KEY]Q&location=13.681099891662598,100.74700164794922&radius=1000&name=Suvarnabhumi Airport&type=airport
 ```
 
 This will return the following result:
